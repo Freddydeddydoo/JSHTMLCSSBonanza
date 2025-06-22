@@ -1,6 +1,16 @@
 body{
     background-color: #ce4e4e;
     font-family: Arial, sans-serif;
+    font-size: 16px;
     margin: 0;
     padding: 20px;
+}
+
+#usernameinput:focus{
+    outline: none;
+    border: 2px solid #943838;
+}
+
+#usernameinput{
+    color:#943838;
 }
