@@ -1,9 +1,12 @@
 body{
+    min-height: 100vh;
     background-color: #ce4e4e;
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    height: 100%;
 }
 
 button{

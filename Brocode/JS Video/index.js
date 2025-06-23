@@ -101,4 +101,24 @@ console.log(`the type and value of dogber after typecasting is ${dogber2} and it
 // would be useful if value is static and fixed (ex: pi, D.O.B) its good practice to make keep constant varible capitalized
 
 
+// random number genorator
 
+let randomNum = Math.random(); //to get a random non-integer  number Math.floor(Math.random())
+
+
+// thing about equality 
+
+// == <-- loose equality operator: used if it doesn't really matter what type the thing is  (ex 5 vs "5")
+
+/**
+ * 5 === 5  true
+ * 5 == 5   true
+ * 5 === "5"false
+ * null === undefined false 
+ * true === 1 fales (different types) 
+ */
+
+
+let v1;
+let v2;
+console.log(v1 === v2 + "should return true");

@@ -37,4 +37,5 @@ decreasebtn.onclick = function () {
 resetbtn.onclick = function () {
   count = 0;
   counter.textContent = count;
+  changeCountClr.style.color = "black";
 }
