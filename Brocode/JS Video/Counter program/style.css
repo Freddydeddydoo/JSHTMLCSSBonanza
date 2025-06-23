@@ -1,0 +1,21 @@
+body{
+    background-color: #ce4e4e;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button{
+    border-radius: 15%;
+    background-color: #943838;
+    width: 100px;
+    height: 42.5px;
+    border: 20px;
+    border-color: #974848;
+    transition-duration: 0.4s;
+}
+
+button:hover{
+    background-color: #974848;
+}

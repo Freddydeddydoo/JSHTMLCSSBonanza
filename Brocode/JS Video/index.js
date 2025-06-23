@@ -75,11 +75,30 @@ console.log(usrname);
 // types in JS: strings, numbers, booleans
 
 
-let age1 = window.prompt("how old are you? ");
-age1 = Number(age1)
-age1 += 1;
+// let age1 = window.prompt("how old are you? ");
+// age1 = Number(age1)
+// age1 += 1;
 
-console.log(age1, typeof age1);
+let dogber = "doberman";
+let dogber1 = "doberman";
+let dogber2 = "doberman";
+
+
+dogber = Number(dogber);
+dogber1 = String(dogber1);
+dogber2 = Boolean(dogber2); // will only return false on emprty strings.
+
+
+// console.log(age1, typeof age1);
+let type0 = typeof dogber;
+let type1 = typeof dogber1;
+let type2 = typeof dogber2;
+console.log(`the type and value of dogber after typecasting is ${dogber} and its type is: ${type0}`);
+console.log(`the type and value of dogber after typecasting is ${dogber1} and its type is: ${type1}`);
+console.log(`the type and value of dogber after typecasting is ${dogber2} and its type is: ${type2}`);
+
+//constants type : variables you acnnot change after you declare the variable.
+// would be useful if value is static and fixed (ex: pi, D.O.B) its good practice to make keep constant varible capitalized
 
 
 
