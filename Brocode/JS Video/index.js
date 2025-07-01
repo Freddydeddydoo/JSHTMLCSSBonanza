@@ -60,7 +60,11 @@ function usersubmit(un){
 }
 
 let usrname = "frog";
-document.getElementById("usersubmit").onclick = usersubmit(usrname);
+document.getElementById("usersubmit").onclick = function(){
+    usrname = usersubmit(usrname);
+    console.log(usrname);
+}
+
 
 // you can also do the same thing as above like this: document.getElementById("usersubmit").onclick = function(){
 //     document.getElementById("usernameinput").value;
@@ -122,3 +126,156 @@ let randomNum = Math.random(); //to get a random non-integer  number Math.floor(
 let v1;
 let v2;
 console.log(v1 === v2 + "should return true");
+
+const myCheckbox = document.getElementById("simplecheckbox");
+const vistaBtn = document.getElementById("vistaBtn");
+const mastercardBtn = document.getElementById("MastercardBtn");
+const paypalBtn = document.getElementById("PaypalBtn");
+
+const mySubmit = document.getElementById("mySubmit");
+
+const subResult = document.getElementById("Subresult");
+const payResult = document.getElementById("paymentResult");
+
+
+mySubmit.onclick = function() {
+    if(myCheckbox.checked) {
+        subResult.textContent = `you are subscribed!`;
+    }
+    else {
+        subResult.textContent = `you are not subscribed!`;
+    }
+
+    // if(vistaBtn.checked) {
+    //     payResult.textContent = `you have selected Visa!`;
+    // }
+    // if(mastercardBtn.checked) {
+    //     payResult.textContent = `you have selected Mastercard!`;
+    // }
+    // else if(paypalBtn.checked) {
+    //     payResult.textContent = `you have selected Paypal!`;
+    // }
+    // else {
+    //     payResult.textContent = `you have not selected a payment method!`;
+    // }
+
+    //with switch statements:
+    switch(true) {
+        case vistaBtn.checked:
+            payResult.textContent = `you have selected Visa!`;
+            break;
+        case mastercardBtn.checked:
+            payResult.textContent = `you have selected Mastercard!`;
+            break;
+        case paypalBtn.checked:
+            payResult.textContent = `you have selected Paypal!`;
+            break;
+        default:
+            payResult.textContent = `you have not selected a payment method!`;
+            break;
+    }
+
+}
+
+
+// switches:
+
+
+/*
+ * alternative to using if/else statements  
+    breaks are imortant to use cause oterhwise it will continue to the next case
+
+    Another way to use switch statements is as shown in the mySubmit.onclick function above
+ */
+
+let day = 1;
+
+switch(day){
+    case 1:
+        console.log("Monday");
+        break;
+    case 2:
+        console.log("Tuesday");
+        break;
+    case 3:
+        console.log("Wednesday");
+        break;
+    case 4:
+        console.log("Thursday");
+        break;
+    case 5:
+        console.log("Friday");
+        break;
+    case 6:
+        console.log("Saturday");
+        break;
+    case 7:
+        console.log("Sunday");
+        break;
+    default:
+        console.log("Invalid day");
+        break;
+}
+
+
+
+// string methods;
+
+let usrname1 = "frog";
+
+// to get first letter of a string::
+
+usrname1 = usrname1.charAt(0);
+console.log(usrname1);
+
+// .indexOf() method: returns the index of the first occurrence of a specified value in a string
+
+let teststr = "  Hello, world!       ";
+
+console.log(teststr.indexOf("world")); // returns 9 since "world" starts at inedex
+
+// .length returns string size 
+
+//trims whitespaces
+console.log(teststr.trim());
+
+//repeat() repeats string X Amount of times
+console.log((teststr.trim().repeat(7)));
+
+// startsWith() and endsWith() are boolean
+
+// padStart(x,y) x = the thing you want to add to a string, y = how long you want yoour string to be
+
+//string slicing::
+ 
+const fuName = "Dog Man";
+
+// let F_name = fuName.slice(0, 3); // (Iclusive, exclusive)
+let F_name = fullname.slice(0, fuName.indexOf(" ")); //more general code 
+let lastChar = fuName.slice(-1); // outputs final character 'n'
+
+console.log(F_name);
+console.log(lastChar);
+
+//excersize :
+
+//goal: to get the extention and username of an email 
+
+const gmail = "dog@gmail.com";
+let usrname2 = gmail.slice(0, gmail.indexOf("@"));
+let extention = gmail.slice(gmail.indexOf("@" ) + 1, gmail.indexOf("."));
+console.log(usrname2);
+console.log(extention);
+
+
+// formatting username from input thorugh chianing
+//trim whitespace, make first letter uppercase and the rest lowercase
+
+usrname = usrname.trim().charAt(0).toUpperCase() + usrname.trim().slice(1).toLowerCase(); // the string contatenation is something I wouldn't have thought of lmao
+
+console.log(usrname);
+
+// while loops work the same way as they do in other programming languages
+
+
+

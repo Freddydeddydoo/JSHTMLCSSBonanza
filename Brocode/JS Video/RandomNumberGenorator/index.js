@@ -1,6 +1,7 @@
 const diceContainer = document.querySelector(".diceContainer");
 const btmRollDice = document.querySelector(".rollDiceBtn");
 let diceNum = 6;
+let total = 0;
 
 function createDie(number){
     //what will this function do? it will create a die
@@ -43,7 +44,12 @@ btmRollDice.onclick = function() {
     //generate a random number and return it.
     diceContainer.innerHTML = "";
     for(let i = 0; i < diceNum; i ++){
-        diceContainer.appendChild(createDie(randomNumberGenerator6()));
+        let currval = randomNumberGenerator6();
+        diceContainer.appendChild(createDie(currval));
+        total += currval;
     }
+    console.log(`current value == ${total}`);
+    total = 0;
 }
+
 

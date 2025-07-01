@@ -6,3 +6,8 @@ Join me on my journey as I try my best to get some level of competency in this f
 
 Be sure to follow me as I complete my portfolio as well! The link to that repo is right here: (I'll add link when its taken shape. Stay tuned)
 
+
+## Resources used:
+For the dice game in Brocode:
+    - [Drcode dice game](https://www.youtube.com/watch?v=M3InbHr0WAc&t=1313s)
+    
